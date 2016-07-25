@@ -1,0 +1,63 @@
+
+
+h1{
+  font-size: rem(70px);
+  text-transform: uppercase;
+  line-height: 1em;
+  font-family: $lora;
+  color: $charcoal;
+}
+
+h2 {
+  font-size: rem(40px);
+  font-family: $libre;
+  color: $maroon;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.15em;
+}
+
+
+h3{
+  font-size: rem(25px);
+  font-family: $libre;
+  text-transform: capitalize;
+  color: $gold;
+}
+
+
+
+p, ul, ol{
+  font: rem(22px) $libre;
+  color: $charcoal;
+  line-height: 1.2em;
+}
+
+li {margin-bottom: 10px;}
+
+// Links
+a,
+a:visited {
+  text-decoration : none;
+}
+
+// Media Queries
+
+@media screen and (max-width: $tablet-vert-breakpoint){
+  h1{
+    font-size: rem(50px);
+  }
+  h2, h3{
+    font-size: rem(32px);
+  }
+}	
+	
+	
+@media screen and (max-width: $small-breakpoint){
+  h1{
+    font-size: rem(38px);
+  }
+  h2, h3{
+    font-size: rem(26px);
+  }
+}

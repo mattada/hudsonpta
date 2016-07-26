@@ -1,5 +1,5 @@
 {#
- # Event Single template
+ # News entry template
  # -------------------
  #}
 
@@ -8,9 +8,9 @@
 {% block content %}
 	<section class="container">
 		<div class="row">
-	<article class="col-8 ">
+	<article class="col-8">
 		<h1>{{ entry.title }}</h1>
-		<p>Join us on {{ entry.eventDate.format('F d, Y - h:i A') }}</p>
+		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
 		{{ entry.body }}
 	</article>
 	<div class="col-4 sidebar">

@@ -1,41 +1,37 @@
-{#
- # Homepage template
- # ---------------
- #
- # When this template gets loaded, it will be because someone has accessed
- # http://yoursite.com/ (without any URI). Craft checks to see if you have
- # a Single section set to be the Homepage (as you do, by default), and
- # loads the section’s Template (this file). A special ‘entry’ variable
- # will already be set for you, assigned to the Homepage entry.
- #
- # It's worth noting that even if you didn't have a Homepage Single section,
- # as long as this template remains at craft/templates/index.html, it
- # would still be the one to get loaded when accessing http://yoursite.com/,
- # albeit without an ‘entry’ variable already set for you.
- #
- # See this page for more details on how Craft routes requests:
- # http://craftcms.com/docs/routing
- #}
-
-{% extends "_layout" %}
-
-{% block content %}
-
-<section class="container homeintro">
+<html>
+	<head>
+		<title>Hudson Elementary PTA</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet"  href="assets/css/ginger.min.css">
+		<link type="text/css" rel="stylesheet"  href="assets/css/theme.css">
+		<script src="https://use.fontawesome.com/71eb3125bb.js"></script>
+	</head>
+	
+	<body>
+		
+		<header class="container">
+			<div class="row">
+				<div class="col-7">
+					<h1 class="branding">Hudson PTA</h1>
+				</div>
+				<div class="col-5 social">
+					<a href="#">PTA FB</a>
+					<a href="#">Tempe USD FB</a>
+				</div>
+			</div>
+		</header>
+		
+		<section class="container homeintro">
 			<div class="row">
 				<div class="col-7 col-centered">
 					
 					<article>
-						<h1>{{ entry.title }}</h1>
-						{{ entry.body }}
+						<h1>This is an intro to the site</h1>
+						<p>And some supporting content. Condimentum vehicula litora id eros vestibulum dapibus parturient proin a est parturient pharetra eu rutrum vel vehicula nisl sit sem consectetur parturient eu.Nunc duis a tempus parturient parturient aliquet accumsan gravida netus adipiscing ante suscipit erat a hac consequat iaculis imperdiet vitae erat praesent a.Condimentum lobortis vestibulum ullamcorper blandit convallis adipiscing volutpat a posuere hac vestibulum metus consectetur sociis ridiculus nam cubilia.Porttitor condimentum cras a sem nibh dui potenti mattis quis a suspendisse taciti dictum a at arcu vitae quam.Eleifend ac at praesent a ullamcorper eu a ullamcorper vulputate condimentum fermentum condimentum amet integer elit nisi scelerisque egestas tempus dui a montes quis neque.Gravida et condimentum amet nec lorem eu.</p>
 					</article>
 				</div>
-				<div class="col-5 col-centered">	
-					{% if entry.introImage | length %}
-					    {% for asset in entry.introImage %}
-					        <img src="{{ asset.url }}" alt="hawk-logo" width="1000" height="989" style="padding:20px 0 40px;" />
-					    {% endfor %}
-					{% endif %}
+				<div class="col-5 col-centered">
+					<img src="assets/img/hawk-logo.jpg" alt="hawk-logo" width="1000" height="989" style="padding:20px 0 40px;" />
 				</div>
 				
 			</div>
@@ -43,7 +39,7 @@
 		
 		
 		
-				<section class="container newsletter">
+		<section class="container newsletter">
 			<div class="row">
 				<div class="col-12 col-centered">
 					<!-- Begin MailChimp Signup Form -->
@@ -93,15 +89,15 @@
 					<h2>Upcoming Events</h2>
 					<p>Maybe a short list of events coming up? </p>
 					<ul class="eventlist">
-						{% for entry in craft.entries.section('events').limit(5).find() %}
-								<li><a href="{{ entry.url }}">{{ entry.title }}<br>{{ entry.eventDate.format('F d, Y - h:i A') }}</a></li>
-							{% endfor %}
+						<li>Meet the Teacher night - July 28</li>
+						<li>First Day of School - August 1</li>
 					</ul>
 				</div>
 					
 				<div class="col-6">
 					<h2>Volunteer Opportunities</h2>
-					{{ entry.volunteerOpps }}
+					<p>Quick intro about the need for volunteers!</p>
+				<p>Maybe a form here?</p>
 				</div>
 
 			</div>
@@ -112,9 +108,6 @@
 		<section class="container contact">
 			<div class="row">
 				<div class="col-6 col-centered">
-					<h2>Donate</h2>
-					<p>Go Fund Me</p>
-					
 					<h2>Contact us</h2>
 					<p>Key Contacts</p>
 					<ul class="eventlist">
@@ -126,17 +119,8 @@
 				</div>
 				
 				<div class="col-6 col-centered">
-					<h2>Recent News</h2>
-						<ul>
-							{% for entry in craft.entries.section('news').limit(5).find() %}
-								<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-							{% endfor %}
-						</ul>
+					<h2>Donate</h2>
+					<p>Go Fund Me</p>
 				</div>
 			</div>
 		</section>
-		
-
-
-	
-{% endblock %}

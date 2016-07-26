@@ -1,0 +1,58 @@
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet"  href="{{ siteUrl }}assets/css/ginger.min.css">
+		<link type="text/css" rel="stylesheet"  href="{{ siteUrl }}assets/css/theme.css">
+		<script src="https://use.fontawesome.com/71eb3125bb.js"></script>
+		
+</head>
+
+<body>
+	
+	<header class="container">
+		<div class="row">
+			<div class="col-7">
+				<h1 class="branding">Hudson PTA</h1>
+			</div>
+			<div class="col-5 social">
+				<a href="#">PTA FB</a>
+				<a href="#">Tempe USD FB</a>
+			</div>
+		</div>
+	</header>
+		
+		
+
+{% block content %}
+	<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+	<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+{% endblock %}
+
+
+<footer id="footer" class="container">
+	<div class="row">
+		<div class="row-12">
+			<p>Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  
+				Built with <a href="http://craftcms.com">Craft</a></p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

@@ -33,7 +33,7 @@ blockquote {
   padding: 0; }
 
 a, avisited {
-  color: #8C1D40; }
+  color: #7c1b15; }
 
 small {
   font-size: .85em; }
@@ -194,7 +194,7 @@ h1 {
 h2 {
   font-size: rem(40px);
   font-family: "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
-  color: #8C1D40;
+  color: #7c1b15;
   text-transform: none;
   font-weight: normal;
   line-height: 1.15em; }
@@ -203,7 +203,7 @@ h3 {
   font-size: rem(25px);
   font-family: "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
   text-transform: capitalize;
-  color: #FFC627; }
+  color: #feb415; }
 
 p, ul, ol {
   font: rem(22px) "Libre Franklin", Helvetica, Arial, Verdana, sans-serif;
@@ -229,6 +229,15 @@ a:visited {
 
   h2, h3 {
     font-size: rem(26px); } }
+#mc-embedded-subscribe.button {
+  background: #7c1b15 !important;
+  color: white;
+  border: #7c1b15 2px solid !important;
+  height: auto !important; }
+  #mc-embedded-subscribe.button:hover {
+    background: #feb415 !important;
+    color: #7c1b15 !important; }
+
 header {
   background: #2a2a2a;
   padding: 20px; }
@@ -239,7 +248,7 @@ header {
   padding: 80px 0px; }
 
 .newsletter {
-  background: #FFC627;
+  background: #feb415;
   padding: 50px; }
 
 /*# sourceMappingURL=theme.css.map */

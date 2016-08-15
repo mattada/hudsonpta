@@ -32,11 +32,41 @@
 
 
 // ============== ** =============
-//     Events & Vol Opps row
+//     Events row
 // ============== ** =============
 
 
-.events-opps {
+.eventsrow {
+	background: rgba($charcoal, 0.25);
+	padding: 50px 25px;
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		list-style: none;}
+		
+	li {
+		list-style: none;
+		margin: 10px;
+		display: inline-block;
+		border: 1px solid;
+		border-color: rgba($charcoal, 0.44);
+		
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: 20px;
+			background: rgba($charcoal, 0);
+			transition: all .2s ease-in;
+			
+			&:hover {
+				background: rgba($charcoal, 0.35);
+			}
+		}
+	}
+	
 	
 }
 

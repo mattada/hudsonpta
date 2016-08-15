@@ -276,10 +276,11 @@ header {
     list-style: none; }
   .eventsrow li {
     list-style: none;
-    margin: 10px;
+    margin: 10px 1.5%;
     display: inline-block;
     border: 1px solid;
-    border-color: rgba(42, 42, 42, 0.44); }
+    border-color: rgba(42, 42, 42, 0.44);
+    width: 30%; }
     .eventsrow li a {
       display: block;
       width: 100%;
@@ -289,5 +290,10 @@ header {
       transition: all .2s ease-in; }
       .eventsrow li a:hover {
         background: rgba(42, 42, 42, 0.35); }
+
+@media screen and (max-width: 1024px) {
+  .eventsrow ul li {
+    width: 90%;
+    margin: 10px auto; } }
 
 /*# sourceMappingURL=theme.css.map */

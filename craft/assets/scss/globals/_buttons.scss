@@ -1,0 +1,11 @@
+#mc-embedded-subscribe.button {
+	background: $maroon !important;
+	color: white;
+	border: $maroon 2px solid !important;	
+	height: auto !important;
+	
+	&:hover {
+		background: $gold !important;
+		color: $maroon !important;
+	}
+}

@@ -45,10 +45,10 @@
       ) );
     register_sidebar(
       array(
-        'name'          => __( 'Footer Area 4', 'theme-slug' ),
-        'id'            => 'footer-widget-4',
-        'description'   => 'Appears in the fourth footer area',
-        'before_widget' => '<aside id="footer-widget-4" class="footer-widget">',
+        'name'          => __( 'events', 'theme-slug' ),
+        'id'            => 'events',
+        'description'   => 'Appears in the home events area',
+        'before_widget' => '<aside id="event-widget" class="event-widget">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h2>',
         'after_title'   => '</h2>',

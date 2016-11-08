@@ -23,6 +23,10 @@
 	<?php } ?>
 
   <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+  
+  		<link type="text/css" rel="stylesheet"  href="<?php bloginfo('template_url');?>/assets/css/ginger.min.css">
+		<link type="text/css" rel="stylesheet"  href="<?php bloginfo('template_url');?>/assets/css/theme.css">
+		<script src="https://use.fontawesome.com/71eb3125bb.js"></script>
 
   <?php wp_head(); ?>
 </head>
@@ -30,17 +34,25 @@
 <body <?php body_class(); ?>>
 
   <?php // Header ?>
-  <header>
+  
+  
+  <header class="container">
+		<div class="row">
+			<div class="col-7">
+				<h1 class="branding"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			</div>
+			<div class="col-5 social">
+				<a href="https://www.facebook.com/hudsonhawkpta/" style="color:#fff;">
+					<i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+					
+				    <nav class="main-nav">
+				      <?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
+				    </nav>
 
-    <h1>
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-    </h1>
+			</div>
+		</div>
+	</header>
 
-    <nav class="main-nav">
-      <?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
-    </nav>
-
-  </header>
 
   <?php // Main Content ?>
   <main>

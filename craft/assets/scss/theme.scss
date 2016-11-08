@@ -1,0 +1,21 @@
+// fonts
+@import 'globals/fonts';
+
+// Variables
+@import 'globals/variables';
+
+
+// Global Styles
+@import 'globals/global';
+@import 'globals/typography';
+@import 'globals/buttons';
+
+// Components
+@import 'parts/header';
+@import 'parts/footer';
+@import 'parts/forms';
+@import 'parts/newsletter';
+
+
+// Templates
+@import 'templates/home';
